@@ -55,3 +55,96 @@ function foo(){
 console.log(foo()) //10
 
 ### **Question 4**
+
+function foo(){
+
+    var bar="I'm a bar variable"
+    
+    function bar(){
+    
+        return "I'm a bar function"
+        
+    }
+    
+    return bar()
+    
+}
+
+console.log(foo()) // bar is not a function <br>
+This is due to the naming conflict between the function and the variable bar, when you create the function bar, bar is already defined.
+
+### **Question 5**
+
+greeting()
+
+var greeting=function (){
+
+    console.log("Good morning")
+    
+}
+greeting()
+
+function greeting(){
+
+    console.log("Good evening")
+    
+}
+
+greeting()
+
+// "Good evening"
+
+// "Good morning"
+
+//"Good morning"
+
+### **Question 6**
+
+var foo=5
+
+console.log("foo:", foo) //"foo:", 5
+
+var foo=10
+
+console.log("foo:", foo) //"foo:", 10
+
+### **Question 7**
+
+console.log(foo()) // 3
+
+function foo(){
+
+    var bar=function (){
+    
+        return 3
+        
+    }
+    
+    return bar()
+    
+    var bar=function (){
+    
+        return 8
+        
+    }
+    
+}
+
+### **Question 8**
+
+var x="foo";
+
+(function (){
+
+    console.log("x: " + x)
+    
+    var x="bar"
+    
+    console.log("x: " + x)
+    
+}())
+
+//"x: undefined"
+//"x: bar"
+
+### **Question 9**
