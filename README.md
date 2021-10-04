@@ -148,3 +148,37 @@ var x="foo";
 //"x: bar"
 
 ### **Question 9**
+
+function foo(){
+
+    console.log("First")
+    
+}
+
+foo()
+
+function foo(){
+
+    console.log("Second")
+    
+}
+
+// "second"
+
+### **Question 10**
+
+var foo=5
+
+function baz(){
+
+    foo=10
+    
+    return 
+    
+    function foo(){}
+    
+}
+
+baz() //nothing happends because there is not something to return, in addition, it is wrong to assign 10 to variable foo because foo is a function due to function hoisting. 
+
+console.log(foo) //5
